@@ -6,8 +6,10 @@
 
 #include "main.h"
 
-#define READ_BUFF_SIZE  42
 
+/**
+ * Read password
+ */
 void read_password(char *buff)
 {
   struct termios        old;
@@ -26,11 +28,14 @@ void read_password(char *buff)
   tcsetattr(STDIN_FILENO, TCSADRAIN, &old);
 }
 
+/**
+ * Program in
+ */
 int main(void)
 {
   char  buff[READ_BUFF_SIZE];
 
   read_password(buff);
-  printf("Mon pass entré: %s\n", buff);
+  printf("Mon de passe entré: %s\n", buff);
   return 0;
 }
