@@ -1,0 +1,1 @@
+/usr/bin/gcc  -O3 -DNDEBUG   CMakeFiles/prog.dir/src/main.c.o  -o bin/Release/prog -rdynamic 
