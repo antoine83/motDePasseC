@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/antoine/dev/motDePasseC/src/main.c
+termios.h
+-
+strings.h
+-
+string.h
+-
+unistd.h
+-
+stdio.h
+-
+main.h
+/home/antoine/dev/motDePasseC/src/main.h
+
+/home/antoine/dev/motDePasseC/src/main.h
+stddef.h
+-
+
