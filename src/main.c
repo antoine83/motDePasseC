@@ -1,3 +1,14 @@
+/**
+ * \file main.c
+ * \brief Programme de saisie de mot de passe.
+ * \author Antoine FADDI
+ * \version 0.1
+ * \date 03 mars 2012
+ *
+ * Programme de saisie de mot de passe en C..
+ *
+ */
+
 #include <termios.h>
 #include <strings.h>
 #include <string.h>
@@ -8,8 +19,9 @@
 
 
 /**
- * Read password
- */
+* Read password
+* @param buff is buffer
+*/
 void read_password(char *buff)
 {
   struct termios        old;
@@ -21,15 +33,19 @@ void read_password(char *buff)
   bcopy(&old, &new, sizeof(struct termios));
   new.c_lflag &= ~ECHO;
   tcsetattr(STDIN_FILENO, TCSADRAIN, &new);
+
+  /*!< Lecture de la saisie au clavier*/
   fgets(buff, READ_BUFF_SIZE, stdin);
+
   nb = strlen(buff) - 1;
   if (buff[nb] == '\n')
     buff[nb] = '\0';
+
   tcsetattr(STDIN_FILENO, TCSADRAIN, &old);
 }
 
 /**
- * Program in
+ * \brief Program start in.
  */
 int main(void)
 {

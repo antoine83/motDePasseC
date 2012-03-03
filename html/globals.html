@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
-<title>MotDePasseC: Page principale</title>
+<title>MotDePasseC: Champs de donnée</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javaScript" src="search/search.js"></script>
@@ -17,8 +17,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="navigation" id="top">
   <div class="tabs">
     <ul>
-      <li class="current"><a href="index.html"><span>Page&nbsp;principale</span></a></li>
-      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li><a href="index.html"><span>Page&nbsp;principale</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <img id="MSearchSelect" src="search/search.png"
@@ -34,9 +34,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
       </li>
     </ul>
   </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Liste&nbsp;des&nbsp;fichiers</span></a></li>
+      <li class="current"><a href="globals.html"><span>Portée&nbsp;globale</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li class="current"><a href="globals.html"><span>Tout</span></a></li>
+      <li><a href="globals_func.html"><span>Fonctions</span></a></li>
+    </ul>
+  </div>
 </div>
 <div class="contents">
-<h1>MotDePasseC Documentation</h1><h3 class="version">1.0 </h3></div>
+Liste des fonctions, variables, macros, enumérations, et définitions de type documentés avec liens vers la documentation :<ul>
+<li>main()
+: <a class="el" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main.c</a>
+</li>
+<li>read_password()
+: <a class="el" href="main_8c.html#a8cc867ac97d488837d885734e195021e">main.c</a>
+</li>
+</ul>
+</div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
