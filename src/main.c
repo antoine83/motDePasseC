@@ -24,15 +24,21 @@
 */
 void read_password(char *buff)
 {
-  struct termios        old;
-  struct termios        new;
+  struct termios        oldConfig;
+  struct termios        newConfig;
   int                   nb;
 
   buff[0] = '\0';
-  tcgetattr(STDIN_FILENO, &old);
-  bcopy(&old, &new, sizeof(struct termios));
-  new.c_lflag &= ~ECHO;
-  tcsetattr(STDIN_FILENO, TCSADRAIN, &new);
+
+  tcgetattr(STDIN_FILENO, &oldConfig);
+
+#ifdef DEBUG
+  afficheSpeed(&oldConfig);
+#endif
+
+  bcopy(&oldConfig, &newConfig, sizeof(struct termios));
+  newConfig.c_lflag &= ~ECHO;
+  tcsetattr(STDIN_FILENO, TCSADRAIN, &newConfig);
 
   /*!< Lecture de la saisie au clavier*/
   fgets(buff, READ_BUFF_SIZE, stdin);
@@ -41,7 +47,7 @@ void read_password(char *buff)
   if (buff[nb] == '\n')
     buff[nb] = '\0';
 
-  tcsetattr(STDIN_FILENO, TCSADRAIN, &old);
+  tcsetattr(STDIN_FILENO, TCSADRAIN, &oldConfig);
 }
 
 /**
@@ -54,4 +60,12 @@ int main(void)
   read_password(buff);
   printf("Mon de passe entré: %s\n", buff);
   return 0;
+}
+
+void afficheSpeed(struct termios *tmpConf)
+{
+    int                   speedIn;
+
+    speedIn = cfgetispeed(tmpConf);
+    printf("Vitesse en cours : %i = %s\n", speedIn, affSpeed[speedIn]);
 }
