@@ -16,7 +16,7 @@ preinstall:
 #=============================================================================
 # Special targets provided by cmake.
 
-# Disable implicit rules so canoncical targets will work.
+# Disable implicit rules so canonical targets will work.
 .SUFFIXES:
 
 # Remove some rules from gmake that .SUFFIXES does not remove.
@@ -43,11 +43,17 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
+# Escaping for special characters.
+EQUALS = =
+
+# The program to use to edit the cache.
+CMAKE_EDIT_COMMAND = /usr/bin/ccmake
+
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/antoine/dev/motDePasseC
+CMAKE_SOURCE_DIR = /home/antoine/workspaceProgC/motDePasseC
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/antoine/dev/motDePasseC
+CMAKE_BINARY_DIR = /home/antoine/workspaceProgC/motDePasseC
 
 #=============================================================================
 # Target rules for target CMakeFiles/prog.dir
@@ -56,7 +62,7 @@ CMAKE_BINARY_DIR = /home/antoine/dev/motDePasseC
 CMakeFiles/prog.dir/all:
 	$(MAKE) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/depend
 	$(MAKE) -f CMakeFiles/prog.dir/build.make CMakeFiles/prog.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/antoine/dev/motDePasseC/CMakeFiles  1
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/antoine/workspaceProgC/motDePasseC/CMakeFiles  1
 	@echo "Built target prog"
 .PHONY : CMakeFiles/prog.dir/all
 
@@ -66,9 +72,9 @@ all: CMakeFiles/prog.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/prog.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/antoine/dev/motDePasseC/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antoine/workspaceProgC/motDePasseC/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/prog.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/antoine/dev/motDePasseC/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antoine/workspaceProgC/motDePasseC/CMakeFiles 0
 .PHONY : CMakeFiles/prog.dir/rule
 
 # Convenience name for target.

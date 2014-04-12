@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/antoine/dev/motDePasseC/src/main.c
+/home/antoine/workspaceProgC/motDePasseC/src/main.c
 termios.h
 -
 strings.h
@@ -18,9 +18,9 @@ unistd.h
 stdio.h
 -
 main.h
-/home/antoine/dev/motDePasseC/src/main.h
+/home/antoine/workspaceProgC/motDePasseC/src/main.h
 
-/home/antoine/dev/motDePasseC/src/main.h
+/home/antoine/workspaceProgC/motDePasseC/src/main.h
 stddef.h
 -
 

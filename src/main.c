@@ -60,7 +60,7 @@ int main(void)
   char  buff[READ_BUFF_SIZE];
 
   read_password(buff);
-  printf("Mon de passe entré: %s\n", buff);
+  printf("\nMon de passe entré : %s\n", buff);
   return 0;
 }
 
