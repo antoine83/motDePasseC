@@ -40,6 +40,8 @@ void read_password(char *buff)
   newConfig.c_lflag &= ~ECHO;
   tcsetattr(STDIN_FILENO, TCSADRAIN, &newConfig);
 
+  /*!< Affichage de la demande*/
+  printf("Saisie du mot de passe : ");
   /*!< Lecture de la saisie au clavier*/
   fgets(buff, READ_BUFF_SIZE, stdin);
 
